@@ -14,7 +14,6 @@ import java.util.Optional;
 @RequestMapping("/api/library")
 public class BookController {
 
-    @Autowired
     private IBookService bs;
 
     /**

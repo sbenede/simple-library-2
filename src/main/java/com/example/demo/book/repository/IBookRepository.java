@@ -11,5 +11,6 @@ import java.util.List;
 @Repository
 public interface IBookRepository extends JpaRepository<Book, Long> {
 
+    //TODO écrire requête
     List<Book> findByTitleOrAuthor(@Param("name") String name);
 }
