@@ -2,6 +2,7 @@ import {Book} from "../book/Book";
 import {bookStore} from "../../stores/bookStore";
 import {BooksProps} from "./Books.props";
 import { useEffect, useState, useCallback } from 'react'
+import styles from './Books.module.scss'
 
 export const Books = (props: BooksProps) => {
   const [books, setBooks] = useState([])
@@ -13,7 +14,7 @@ export const Books = (props: BooksProps) => {
   })
 
   const renderGreeting = useCallback(() => {
-    return <div>{`Bonjour ${props.user} !`}</div>
+    return <div className={styles.title}>{`Bonjour ${props.user} !`}</div>
   }, [props.user])
 
   const modalCreateBook = () => {
