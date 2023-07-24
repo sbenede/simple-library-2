@@ -45,8 +45,9 @@ export const Books = (props: BooksProps) => {
           books.map((book) =>
             <Book title={book.title} author={book.author} year={book.year}/>)
         ) : (
-          <button onClick={() => setOpenModal}>Ajouter un livre à la librarie</button>
+          <button onClick={() => setOpenModal(true)}>Ajouter un livre à la librarie</button>
         )}
+        {modalCreateBook()}
       </div>
     </>
   )
