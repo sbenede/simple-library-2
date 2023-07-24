@@ -13,6 +13,8 @@ export const Books = (props: BooksProps) => {
     setBooks(bookStore.books)
   })
 
+  console.log('test render')
+
   const renderGreeting = useCallback(() => {
     return <div className={styles.title}>{`Bonjour ${props.user} !`}</div>
   }, [props.user])
